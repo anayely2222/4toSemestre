@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fadd;
+}
+
+h2 {
+    color: #5dfd0d;
+    margin-top: 30px;
+}
+.img-carousel {
+    width: 50%;      /* reduce el ancho */
+    height: 250px;   /* reduce la altura */
+    object-fit: cover;
+    margin: 0 auto;  /* centra la imagen */
+}
+@media (max-width: 768px) {
+    .img-carousel {
+        width: 70%;
+        height: 60px;
+        }
+}
+footer {
+    font-size: 14px;
+}
