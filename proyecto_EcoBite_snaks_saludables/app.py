@@ -1,21 +1,32 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 # Ruta principal
 @app.route('/')
 def inicio():
-    return "Bienvenido a Ecobite – Snacks saludables y naturales 🌱"
+    return render_template('index.html')
 
-# Ruta dinámica (ejemplo adaptado al negocio)
+
+# Ruta dinámica de producto
 @app.route('/producto/<nombre>')
 def producto(nombre):
-    return f"Producto: {nombre} – disponible en Ecobite 🥗"
+    return render_template('producto.html', nombre=nombre)
 
-# Otra opción (cliente)
+
+# Ruta dinámica de cliente
 @app.route('/cliente/<nombre>')
 def cliente(nombre):
-    return f"Bienvenido, {nombre}. Gracias por preferir Ecobite 💚"
+    return render_template('cliente.html', nombre=nombre)
+
+
+# Ruta adicional (acerca de)
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    

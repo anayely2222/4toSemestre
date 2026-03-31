@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoBite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>EcoBite - Snacks Saludables</h1>
+</header>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/about">Acerca de</a>
+    <a href="/productos">Productos</a>
+    <a href="/clientes">Clientes</a>
+</nav>
+
+<hr>
+
+{% block content %}
+{% endblock %}
+
+<hr>
+
+<footer>
+    <p>© 2026 EcoBite</p>
+</footer>
+
+</body>
+</html>
